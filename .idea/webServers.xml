@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="38ab5f5d-0539-4843-be2c-5c88ebf3c34e" name="localx" url="http://localhost:8181">
+        <fileTransfer mountedRoot="E:\WebProject\wdg-site-new" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
