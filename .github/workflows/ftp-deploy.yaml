@@ -6,27 +6,20 @@ on:
 
 jobs:
   deploy:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
        - name: Checkout repository
-              uses: actions/checkout@v4
+         uses: actions/checkout@v4
     
-        - name: Deploy to FTP
-          uses: pontago/lftp-deploy-action@v1.0.1
-          with:
+       - name: Deploy to FTP
+         uses: pontago/lftp-deploy-action@v1.0.1
+         with:
             host: ${{ secrets.FTP_SERVER }} # 51.68.206.191 # default is 
             username: ${{ secrets.FTP_USERNAME }}  # wdgweb # default is 
             password: ${{ secrets.FTP_PASSWORD }}  #abcd@1234  # optional, default is 
             port: 21 # optional, default is 
-            protocol: # optional, default is ftp
-            ssh_private_key: # optional, default is 
-            verify_cert: # optional, default is true
-            local_dir: # optional, default is 
+            protocol: ftp # optional, default is ftp
+            # local_dir: # optional, default is 
             remote_dir: /wwwroot # optional, default is 
-            create_remote_dir: # optional, default is true
-            script: # optional, default is 
-            dry_run: # optional
-            debug: # optional
-            timeout: # optional, default is 30
-            max_retries: # optional, default is 5
+            create_remote_dir: true # optional, default is true
         
