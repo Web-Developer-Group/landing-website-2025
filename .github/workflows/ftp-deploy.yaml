@@ -19,9 +19,14 @@ jobs:
        - name: Deploy using FTP
          uses: zinh/ftp-uploader-action@v0.5
          with:
-            ftpHostname:  ${{ secrets.FTP_SERVER }}
-            ftpUsername: ${{ secrets.FTP_USERNAME }} 
-            ftpPassword: ${{ secrets.FTP_PASSWORD }} # optional, default is 
+            # ftpHostname: ${{ secrets.FTP_SERVER }}
+            # ftpUsername: ${{ secrets.FTP_USERNAME }} 
+            # ftpPassword: ${{ secrets.FTP_PASSWORD }} 
+            ftpHostname:  51.68.206.191
+            ftpUsername: wdgweb
+            ftpPassword: abcd@1234
+            
+            
             # List files to upload to ftp server
             # files: '["*"]'
             files: '["*"]' 
