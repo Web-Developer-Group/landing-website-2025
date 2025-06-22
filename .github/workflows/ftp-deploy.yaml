@@ -10,16 +10,18 @@ jobs:
     steps:
        - name: Checkout repository
          uses: actions/checkout@v4
-    
-       - name: Deploy to FTP
-         uses: pontago/lftp-deploy-action@v1.0.1
+         
+       - name: Deploy using FTP
+         uses: zinh/ftp-uploader-action@v0.5
          with:
-            host: ${{ secrets.FTP_SERVER }} # 51.68.206.191 # default is 
-            username: ${{ secrets.FTP_USERNAME }}  # wdgweb # default is 
-            password: ${{ secrets.FTP_PASSWORD }}  #abcd@1234  # optional, default is 
-            port: 21 # optional, default is 
-            protocol: ftp # optional, default is ftp
-            # local_dir: # optional, default is 
-            remote_dir: /wwwroot # optional, default is 
-            create_remote_dir: true # optional, default is true
+            ftpHostname:  ${{ secrets.FTP_SERVER }}
+            ftpUsername: ${{ secrets.FTP_USERNAME }} 
+            ftpPassword: ${{ secrets.FTP_PASSWORD }} # optional, default is 
+            # List files to upload to ftp server
+            files: /
+            # Source folder
+            src: /wwwroot
+            # Destination folder
+           
+                  
         
