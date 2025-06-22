@@ -22,14 +22,14 @@ jobs:
             # ftpHostname: ${{ secrets.FTP_SERVER }}
             # ftpUsername: ${{ secrets.FTP_USERNAME }} 
             # ftpPassword: ${{ secrets.FTP_PASSWORD }} 
-            ftpHostname:  51.68.206.191
+            ftpHostname: 51.68.206.191
             ftpUsername: wdgweb
             ftpPassword: abcd@1234
             
             
             # List files to upload to ftp server
             # files: '["*"]'
-            files: '["*"]' 
+            files: '*' 
             src: .
             # Source folder
             dest: wwwroot
