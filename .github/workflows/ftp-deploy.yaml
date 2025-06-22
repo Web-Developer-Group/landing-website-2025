@@ -18,10 +18,10 @@ jobs:
             ftpUsername: ${{ secrets.FTP_USERNAME }} 
             ftpPassword: ${{ secrets.FTP_PASSWORD }} # optional, default is 
             # List files to upload to ftp server
-            files: '["*"]'
+            # files: '["*"]'
             src: .
             # Source folder
-            dest: ./wwwroot
+            dest: wwwroot
             # Destination folder
            
                   
